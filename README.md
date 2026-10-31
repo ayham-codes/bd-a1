@@ -6,7 +6,7 @@
 |---|---|
 | **Team members** | _Name 1 (ID)_, _Name 2 (ID)_, _Name 3 (ID)_, _Name 4 (ID)_ |
 | **Dataset** | UCI SMS Spam Collection (approved option 1) |
-| **Docker Hub image** | `ayhamayman/bd-a1:v1` (also tagged `latest`) |
+| **Docker Hub image** | `ayhamayman/bd-a1:v1` |
 | **GitHub repository** | `https://github.com/ayham-codes/bd-a1` |
 
 ---
@@ -99,10 +99,7 @@ bd-a1/
 │       ├── 06_sampling_comparison.png
 │       ├── 07_clusters_vs_labels.png
 │       └── 08_cluster_projection.png
-├── screenshots/             # Docker / JupyterLab evidence (see screenshots/README.md)
-└── docs/
-    ├── requirements_checklist.md   # requirement → implementation → evidence mapping
-    └── validation/                 # Docker validation log + JupyterLab screenshot from project testing
+└── screenshots/             # Docker, JupyterLab, Docker Hub and GitHub evidence (01–14)
 ```
 
 ---
@@ -305,7 +302,7 @@ Dockerfile ───────────────► IMAGE ────�
 
 ## 12. Docker Hub publishing
 
-Replace `ayhamayman` with your Docker Hub username. The public repository is `ayhamayman/bd-a1`, with tags `v1` and `latest`.
+The public repository is `ayhamayman/bd-a1`, published with tag `v1`.
 
 1. Log in. Use an access token from *Docker Hub → Account settings → Personal access tokens* as the password.
 
@@ -427,7 +424,22 @@ The dataset and notebook are **inside the image**, so the results appear in `bd-
 
 ## 16. Screenshots
 
-See `screenshots/README.md` for the list of required screenshots and suggested file names.
+| File | Evidence |
+|---|---|
+| `01_docker_build.png` | Successful `docker build` |
+| `02_docker_images.png` | `docker images` showing `bd-a1:latest` |
+| `03_docker_run.png` | `docker run` with port mapping and bind mount |
+| `04_docker_ps.png` | Running container (`docker ps`) |
+| `05_docker_logs.png` | JupyterLab URL in `docker logs` |
+| `06_docker_inspect.png` | Bind mount in `docker inspect` |
+| `07_jupyterlab_notebook.png` | Notebook open in JupyterLab |
+| `08_notebook_run_all.png` | Notebook executed (Restart Kernel and Run All) |
+| `09_output_on_host.png` | Output files persisted on the host |
+| `10_docker_ps_a.png` | Stopped container (`docker ps -a`) |
+| `11_docker_push.png` | Image pushed to Docker Hub |
+| `12_dockerhub_page.png` | Docker Hub repository page |
+| `13_teammate_pull_run.png` | Teammate pulled and ran the image |
+| `14_github_repo.png` | GitHub repository |
 
 ## 17. Credits
 
